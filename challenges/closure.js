@@ -6,19 +6,30 @@
 const external = "I'm outside the function";
 
 function myFunction() {
-  console.log(external);
-  const internal = "Hello! I'm inside myFunction!";
+    console.log(external);
+    const internal = "Hello! I'm inside myFunction!";
 
-  function nestedFunction() {
-    console.log(internal);
-  };
-  nestedFunction();
+    function nestedFunction() {
+        console.log(internal);
+    };
+    nestedFunction();
 }
 myFunction();
 
-// Explanation: 
+// Explanation: nested function trys to find internal but its outside its lexical scope so it reaches out
+// and get the value of internal from inside myFunction thus creating a closure.
 
 
 /* Task 2: Counter */
 
 /* Create a function called `summation` that accepts a parameter and uses a counter to return the summation of that number. For example, `summation(4)` should return 10 because 1+2+3+4 is 10. */
+
+function summation(num) {
+    sumNum = 0;
+    for (let i = 0; i <= num; i++) {
+        sumNum += i
+    }
+    return sumNum;
+}
+
+console.log(summation(4));

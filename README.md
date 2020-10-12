@@ -26,14 +26,29 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
+.foreach similar to for loop, foreach stops after the first case and does not repeat, does not return a new array
+
+.map returns a new array with transformed data, .map is also chainable you can chain .filter or reduce or sort after your map method
 
 2. Explain the difference between a callback and a higher order function.
+    a function that is passed as an argument in another function is a callback
+    the function that the callback is applied too is the higher order
 
-3. What is closure?
+
+3. What is closure? theres a function inside of a function.. the nested function has to reach outside of its lexical scope to get access to the variable(data) creating a closure
 
 4. Describe the four rules of the 'this' keyword.
+a.  global context(binding) when in global scope the value of this will be the window object
 
-5. Why do we need super() in an extended class?
+b.  implicit binding: when used in an object this will point to that object but if inside a function "this" will just point to that function
+
+c.  explicit binding: using .call or .apply this is pointing to an object outside its scope or inside a function with that object being outside its lexical scope
+
+d.  new binding : using the new keyword on a prototype or class to create a new instance of that class this is refering to that new object
+that the interpreter created
+
+5. Why do we need super() in an extended class? 
+using super inside the child class super calls the parent constructor and gives us access to its properties and methods.. super gives us access to the "this" keyword.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
